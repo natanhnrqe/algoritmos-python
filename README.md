@@ -9,5 +9,3 @@ Exercícios de lógica de programação resolvidos em Python.
 - Conversão de idade
 - Manipulação de datas
 - Média ponderada
-
-Curso: Desenvolvimento de Sistemas
