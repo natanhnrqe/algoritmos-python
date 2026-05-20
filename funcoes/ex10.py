@@ -10,7 +10,6 @@ def lancar_dados():
     return soma
 
 
-# Primeira Jogada
 print("--- JOGO DE CRAPS ---")
 resultado = lancar_dados()
 
@@ -22,7 +21,7 @@ else:
     ponto = resultado
     print(f"Seu PONTO é {ponto}. Agora você deve tirá-lo novamente.")
 
-    # Rodadas de Ponto
+
     while True:
         proximo_lancamento = lancar_dados()
 

@@ -1,18 +1,15 @@
 def retangulo(line, column):
+    print("+" + "-" * (column - 2) + "+")
 
     for j in range(line):
-
-        if j == 0 or j == line - 1:
-            for i in range(column):
-                print(end="_ ")
+        for k in range(column):
+            if k == 0 or k == column - 1:
+                print(end="|")
+            else:
+                print(end=" ")
 
         print()
 
-        for k in range(column):
-            if k == 0 or k == column - 1:
-                print(end="| ")
-            else:
-                print(end="  ")
+    print("+" + "-" * (column - 2) + "+")
 
-
-retangulo(5, 8)
+retangulo(10, 90)

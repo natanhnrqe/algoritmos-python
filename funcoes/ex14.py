@@ -1,26 +1,31 @@
-def retangulo(lines=1, colunas=1):
 
-    lines = max(1, min(lines, 20))
-    colunas = max(1, min(colunas, 20))
+def quadradoMagico(matriz):
+    somaS = []
+    somaDia = 0
 
-    # Se tiver apenas 1 coluna ou 1 linha, a lógica muda um pouco para não duplicar os cantos
-    if colunas == 1:
-        for _ in range(lines):
-            print("+")
-        return
-    if lines == 1:
-        print("+" + "-" * (colunas - 2) + "+")
-        return
+    for l in range(3):
+        soma = 0
+
+        for c in range(3):
+            if l == c:
+                somaDia +=matriz[l][c]
+
+            soma += matriz[l][c]
+
+        somaS.append(soma)
+    somaS.append(somaDia)
+
+    if somaS.count(somaS[0]) == len(somaS):
+        print("Eh um quadrado magico")
+        for i in range(3):
+            print(f"{matriz[i]} = {somaS[i]}")
+        print(f"[{matriz[0][0]}, {matriz[1][1]}, {matriz[2][2]}] = {somaS[0]} ")
 
 
-    print("+" + "-" * (colunas - 2) + "+")
+matriz = [
+    [8, 3, 4],
+    [1, 5, 9],
+    [6, 7, 2]
+]
 
-
-    for _ in range(lines - 2):
-        print("|" + " " * (colunas - 2) + "|")
-
-
-    print("+" + "- " * (colunas - 2) + "+")
-
-# Testando
-retangulo(10, 8)
+quadradoMagico(matriz)

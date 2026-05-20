@@ -1,16 +1,13 @@
 def somar_pares(n):
-    soma = n
 
     if n < 2:
-        return soma
+        return n
 
     if n % 2 != 0:
         n = n - 1
-        soma = n
 
-    n -= 2
-    return soma + somar_pares(n)
+    return n + somar_pares(n - 2)
 
-result = somar_pares(10)
+result = somar_pares(4)
 
 print(result)
