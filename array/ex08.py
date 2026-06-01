@@ -16,3 +16,5 @@ idades.reverse()
 
 print(f"Alturas: {alturas}")
 print(f"Idades: {idades}")
+
+
